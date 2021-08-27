@@ -4,7 +4,6 @@ import (
 	"context"
 	goerr "errors"
 	"fmt"
-
 	"github.com/movetokube/postgres-operator/pkg/config"
 
 	"github.com/go-logr/logr"
@@ -268,14 +267,11 @@ func (r *ReconcilePostgresUser) newSecretForCR(cr *dbv1alpha1.PostgresUser, role
 	labels := map[string]string{
 		"app": cr.Name,
 	}
-	annotations := cr.Spec.Annotations
-
 	return &corev1.Secret{
 		ObjectMeta: metav1.ObjectMeta{
-			Name:        fmt.Sprintf("%s-%s", cr.Spec.SecretName, cr.Name),
-			Namespace:   cr.Namespace,
-			Labels:      labels,
-			Annotations: annotations,
+			Name:      fmt.Sprintf("%s-%s", cr.Spec.SecretName, cr.Name),
+			Namespace: cr.Namespace,
+			Labels:    labels,
 		},
 		Data: map[string][]byte{
 			"POSTGRES_URL":      []byte(pgUserUrl),
