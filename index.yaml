@@ -3,6 +3,16 @@ entries:
   ext-postgres-operator:
   - apiVersion: v2
     appVersion: 1.1.1
+    created: "2022-05-18T21:24:52.620854022Z"
+    description: A Helm chart for the External Postgres operator
+    digest: 670619970e775861532294a513a2e7b773ae9eedc7f9a956bfdbee6fa3199bca
+    name: ext-postgres-operator
+    type: application
+    urls:
+    - https://github.com/samm-git/postgres-operator/releases/download/ext-postgres-operator-0.1.2/ext-postgres-operator-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.1.1
     created: "2022-05-18T15:37:20.035935537Z"
     description: A Helm chart for the External Postgres operator
     digest: fbeb7b311c4cc0d10a03e886621a6b5d79625abe43ef2d370282ad0463322644
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/samm-git/postgres-operator/releases/download/ext-postgres-operator-0.1.1/ext-postgres-operator-0.1.1.tgz
     version: 0.1.1
-generated: "2022-05-18T15:37:20.035955337Z"
+generated: "2022-05-18T21:24:52.620860722Z"
