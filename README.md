@@ -68,7 +68,8 @@ To install the operator using kustomize, follow the steps below.
     or by using [kustomize](https://github.com/kubernetes-sigs/kustomize) directly\
     `kustomize build deploy/ | apply -f -`
 
-Alternatively you can install operator using Helm Chart located in the `chart` subdirectory.
+Alternatively you can install operator using Helm Chart located in the 
+`charts/ext-postgres-operator` subdirectory.
 
 ## CRs
 
